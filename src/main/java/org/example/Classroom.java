@@ -1,59 +1,62 @@
 package org.example;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+enum classroomType{
+    MORNING, EVENING
+}
 
 public class Classroom {
-//    String email;
-    int result;
-//    String name;
-//    int age;
-//    String address;
+    public String name;
+    public int age;
+    public String address;
+    public String email;
+    public classroomType type;
 
-    public int add(int age1, int age2){
-        result = age1 + age2;
-        return result;
+    public String setName(String newName){
+        this.name = newName;
+        return this.name;
     }
 
-    public int subtract(int age1, int age2){
-        result = age1 - age2;
-        return result;
+    public int setAge(int newAge){
+        this.age = newAge;
+        return this.age;
     }
 
-    public int multiply(int num1, int num2){
-        result = num1 * num2;
-        return result;
+    public String setAddress(String newAddress){
+        this.address = newAddress;
+        return this.address;
     }
 
-//    public String setEmail(String newEmail){
-//        this.email = newEmail;
-//        return this.email;
-//    }
-
-    public float divide(int num1, int num2){
-        result = num1/num2;
-        return result;
-    }
-    
-//    public String getName(){
-//        return this.name;
-//    }
-
-//    public int getAge(){
-//        return this.age;
-//    }
-
-//    public String getAddress(){
-//        return this.address;
-//   }
-
-//    public String getEmail(){
-//        return this.email;
-//    }
-
-    public float mode(int num1, int num2) {
-        result = num1 % num2;
-        return result;
+    public String setEmail(String newEmail){
+        this.email = newEmail;
+        return this.email;
     }
 
+    public classroomType setClassoomType (classroomType newtype){
+        this.type = newtype;
+        return this.type;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public int getAge(){
+        return this.age;
+    }
+
+    public String getAddress(){
+        return this.address;
+    }
+
+    public String getEmail(){
+        return this.email;
+    }
+
+    public String getClassroomType(){
+        return switch (this.type) {
+            case MORNING -> "MORNING";
+            case EVENING -> "EVENING";
+        };
+    }
 }
+
