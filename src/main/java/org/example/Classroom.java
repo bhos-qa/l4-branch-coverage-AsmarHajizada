@@ -1,15 +1,15 @@
 package org.example;
 
 enum classroomType{
-    TECHNICAL, BUSINESS
+    MORNING, EVENING
 }
 
-public class Department {
+public class Classroom {
     public String name;
     public int age;
     public String address;
     public String email;
-    public departmentType type;
+    public classroomType type;
 
     public String setName(String newName){
         this.name = newName;
@@ -31,7 +31,7 @@ public class Department {
         return this.email;
     }
 
-    public departmentType setDepartmentType (departmentType newtype){
+    public classroomType setClassoomType (classroomType newtype){
         this.type = newtype;
         return this.type;
     }
@@ -52,10 +52,10 @@ public class Department {
         return this.email;
     }
 
-    public String getDepartmentType(){
+    public String getClassroomType(){
         return switch (this.type) {
-            case TECHNICAL -> "TECHNICAL";
-            case BUSINESS -> "BUSINESS";
+            case MORNING -> "MORNING";
+            case EVENING -> "EVENING";
         };
     }
 }
