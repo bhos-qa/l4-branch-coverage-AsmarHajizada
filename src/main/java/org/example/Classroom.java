@@ -1,29 +1,21 @@
 package org.example;
 
-enum classroomType{
-    MORNING, EVENING
-}
 
 public class Classroom {
-    String name;
-    int age;
-    String address;
-    String email;
-    classroomType type;
 
-    public String setName(String newName){
-        this.name = newName;
-        return this.name;
+    public int add(int age1, int age2){
+        result=age1 + age2;
+        return result;
     }
 
-    public int setAge(int newAge){
-        this.age = newAge;
-        return this.age;
+    public int subtract(int age1, int age2){
+        result=age1-age2
+        return result;
     }
 
-    public String setAddress(String newAddress){
-        this.address = newAddress;
-        return this.address;
+    public int multiply(int num1, int num2){
+        result=num1*num2;
+        return result;
     }
 
     public String setEmail(String newEmail){
@@ -31,11 +23,11 @@ public class Classroom {
         return this.email;
     }
 
-    public classroomType setClassoomType (classroomType newtype){
-        this.type = newtype;
-        return this.type;
+    public float divide(int num1, int num2){
+        result = num1/num2;
+        return result;
     }
-
+    
     public String getName(){
         return this.name;
     }
@@ -52,10 +44,9 @@ public class Classroom {
         return this.email;
     }
 
-    public String getClassroomType(){
-        return switch (this.type) {
-            case MORNING -> "MORNING";
-            case EVENING -> "EVENING";
-        };
+    public float mode(int num1, int num2) {
+        result = num1 % num2;
+        return result;
     }
+
 }
