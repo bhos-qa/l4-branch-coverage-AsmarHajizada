@@ -6,7 +6,7 @@ public class Classroom {
     int result;
     String name;
     int age;
-    String address
+    String address;
 
     public int add(int age1, int age2){
         result=age1 + age2;
