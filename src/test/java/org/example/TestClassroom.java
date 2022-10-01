@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test;
 public class TestClassroom {
 
     Classroom classroom;
-
+    
     @BeforeEach
-    void setUp() {classroom = new Classroom(); }
+    classroom Classroom = new Classroom(); 
 
     @Test
     @DisplayName("Name should be set")
