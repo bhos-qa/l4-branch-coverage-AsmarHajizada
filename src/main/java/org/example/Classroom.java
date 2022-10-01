@@ -9,17 +9,17 @@ public class Classroom {
     String address;
 
     public int add(int age1, int age2){
-        result=age1 + age2;
+        result = age1 + age2;
         return result;
     }
 
     public int subtract(int age1, int age2){
-        result=age1-age2;
+        result = age1 - age2;
         return result;
     }
 
     public int multiply(int num1, int num2){
-        result=num1*num2;
+        result = num1 * num2;
         return result;
     }
 
