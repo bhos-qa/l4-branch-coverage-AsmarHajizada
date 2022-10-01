@@ -14,32 +14,32 @@ class TestClassroom {
     void setUp() {classroom = new Classroom(); }
 
     @Test
-    @DisplayName("Name should be set")
-    void testSetName() {
-        assertEquals("Asmar", classroom.setName("Asmar"), "It should work for any name");
+    @DisplayName("Addition")
+    void testAdd() {
+        assertEquals(10, classroom.add(8, 4));
     }
 
     @Test
-    @DisplayName("Age should be set")
-    void testSetAge() {
-        assertEquals(15, classroom.setAge(15), "It should work for any age");
+    @DisplayName("Subtraction")
+    void testSubtract() {
+        assertEquals(5, classroom.subtract(10, 5));
     }
 
     @Test
-    @DisplayName("Address should be set")
-    void testSetAddress() {
-        assertEquals("Khatai dist. Ganja pr.", classroom.setAddress("Khatai dist. Ganja pr."), "It should work for any address");
+    @DisplayName("Multiplication")
+    void testMultiply() {
+        assertEquals(21, classroom.multiply(7, 3));
     }
 
     @Test
-    @DisplayName("Email should be set")
-    void testSetEmail() {
-        assertEquals("asmar@gmail.com", classroom.setEmail("asmar@gmail.com"), "It should work for any Email");
+    @DisplayName("Division")
+    void testDivide() {
+        assertEquals(6, classroom.divide(42, 7));
     }
 
     @Test
-    @DisplayName("Classroom type should be set")
-    void testSetClassroomType() {
-        assertEquals(classroomType.MORNING, classroom.setClassoomType(classroomType.MORNING), "Clasroom type should be set for one of the two given types");
+    @DisplayName("Mode")
+    void testMode() {
+        assertEquals(2, classroom.mode(17, 3));
     }
 }
