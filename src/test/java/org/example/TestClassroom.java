@@ -1,45 +1,45 @@
 package org.example;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class TestClassroom {
+public class TestClassroom {
 
     Classroom classroom;
-    
+
     @BeforeEach
     void setUp() {classroom = new Classroom(); }
 
     @Test
-    @DisplayName("Addition")
-    void testAdd() {
-        assertEquals(10, classroom.add(3, 7));
+    @DisplayName("Name should be set")
+    void testSetName() {
+        assertEquals("Asmar", classroom.setName("Asmar"), "It should work for any name");
     }
 
     @Test
-    @DisplayName("Subtraction")
-    void testSubtract() {
-        assertEquals(5, classroom.subtract(10, 5));
+    @DisplayName("Age should be set")
+    void testSetAge() {
+        assertEquals(15, classroom.setAge(15), "It should work for any age");
     }
 
     @Test
-    @DisplayName("Multiplication")
-    void testMultiply() {
-        assertEquals(21, classroom.multiply(7, 3));
+    @DisplayName("Address should be set")
+    void testSetAddress() {
+        assertEquals("Khatai dist. Ganja pr.", classroom.setAddress("Khatai dist. Ganja pr."), "It should work for any address");
     }
 
     @Test
-    @DisplayName("Division")
-    void testDivide() {
-        assertEquals(6, classroom.divide(42, 7));
+    @DisplayName("Email should be set")
+    void testSetEmail() {
+        assertEquals("asmar@gmail.com", classroom.setEmail("asmar@gmail.com"), "It should work for any Email");
     }
 
     @Test
-    @DisplayName("Mode")
-    void testMode() {
-        assertEquals(2, classroom.mode(17, 3));
+    @DisplayName("Classroom type should be set")
+    void testSetClassroomType() {
+        assertEquals(classroomType.MORNING, classroom.setClassoomType(classroomType.MORNING), "Clasroom type should be set for one of the two given types");
     }
 }
