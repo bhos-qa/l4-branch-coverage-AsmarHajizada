@@ -11,7 +11,7 @@ public class TestClassroom {
     Classroom classroom;
     
     @BeforeEach
-    classroom Classroom = new Classroom(); 
+    void setUp() {classroom = new Classroom(); }
 
     @Test
     @DisplayName("Name should be set")
