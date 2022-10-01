@@ -16,7 +16,7 @@ class TestClassroom {
     @Test
     @DisplayName("Addition")
     void testAdd() {
-        assertEquals(10, classroom.add(8, 4));
+        assertEquals(10, classroom.add(3, 7));
     }
 
     @Test
