@@ -5,11 +5,11 @@ enum classroomType{
 }
 
 public class Classroom {
-    public static String name;
-    public static int age;
-    public static String address;
-    public static String email;
-    public static classroomType type;
+    public String name;
+    public int age;
+    public String address;
+    public String email;
+    public classroomType type;
 
     public String setName(String newName){
         this.name = newName;
