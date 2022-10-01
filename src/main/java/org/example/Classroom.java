@@ -9,7 +9,7 @@ public class Classroom {
     }
 
     public int subtract(int age1, int age2){
-        result=age1-age2
+        result=age1-age2;
         return result;
     }
 
