@@ -31,10 +31,6 @@ public class Classroom {
         return this.email;
     }
 
-    public classroomType setClassoomType (classroomType newtype){
-        this.type = newtype;
-        return this.type;
-    }
 
     public String getName(){
         return this.name;
@@ -51,12 +47,21 @@ public class Classroom {
     public String getEmail(){
         return this.email;
     }
-
+    
+    public classroomType setClassoomType (classroomType newtype){
+        this.type = newtype;
+        return this.type;
+    }
+    
     public String getClassroomType(){
         return switch (this.type) {
             case MORNING -> "MORNING";
             case EVENING -> "EVENING";
         };
+    }
+        public byte[] makeHash (String data) throws NoSuchAlgorithmException {
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-1");
+        return messageDigest.digest(data.getBytes());
     }
 }
 
