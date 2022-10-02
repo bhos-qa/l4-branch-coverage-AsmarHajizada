@@ -59,10 +59,5 @@ public class Classroom {
             case EVENING -> "EVENING";
         };
     }
-    
-    public byte[] makeHash (String data) throws NoSuchAlgorithmException {
-        MessageDigest messageDigest = MessageDigest.getInstance("SHA-1");
-        return messageDigest.digest(data.getBytes());
-    }
 }
 
